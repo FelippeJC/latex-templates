@@ -1,0 +1,50 @@
+\documentclass[12pt]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst}
+\usepackage{epigraph}
+\usepackage{import}
+\usepackage{graphicx}
+\usepackage{blindtext}
+\usepackage{fancyvrb}
+
+\begin{document}
+
+\input {obrigatorios/capa.tex}
+\input {obrigatorios/folhaderosto.tex}
+\input {obrigatorios/versofolhaderosto.tex}
+
+\input {opcionais/agradecimentos.tex}
+\input {opcionais/dedicatoria.tex}
+\input {opcionais/epigrafe.tex}
+
+\input {obrigatorios/resumo.tex}
+\input {obrigatorios/abstract.tex}
+
+\input {opcionais/listasimbolos.tex}
+
+\renewcommand*\contentsname{Sumário}
+\tableofcontents
+
+\renewcommand*\chaptername{Capítulo}
+
+\chapter{Teste 1}
+\import{chapters/}{chapter1}
+
+\chapter{Teste 2}
+\import{chapters/}{chapter1}
+
+\chapter{Teste 3}
+\import{chapters/}{chapter1}
+
+\chapter{Conclusão}
+\import{obrigatorios/}{concl}
+
+\renewcommand\bibname{Referências}
+\import{obrigatorios/}{bibliografia.tex}
+
+\renewcommand*\appendixname{Ap\^endice}
+\appendix
+\chapter{Título}
+\import{chapters/}{apendice}
+
+\end{document}
